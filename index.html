@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizly! - Spurningaleikur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-6 shadow-lg">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-2">Quizly!</h1>
+      <p class="text-center text-blue-100">Spurningaleikur fyrir góða stemmingu!</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <ul class="flex justify-center space-x-8 py-4">
+        <li>
+          <button 
+            id="homeBtn"
+            class="text-blue-600 hover:text-blue-800 font-semibold transition-colors"
+          >
+            Forsíða
+          </button>
+        </li>
+        <li>
+          <button 
+            id="questionsBtn"
+            class="text-gray-600 hover:text-blue-600 font-semibold transition-colors"
+          >
+            Spurningar
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center p-8">
+    <!-- Home Page -->
+    <div id="homePage" class="text-center max-w-2xl w-full">
+      <div class="bg-white rounded-lg shadow-xl p-8">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Velkomin í Quizly!</h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Prófaðu þekkingu þína á íslenskum fræðum með spurningaleiknum okkar.
+        </p>
+        <div class="space-y-4">
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <h3 class="font-semibold text-blue-800 mb-2">Spurningar</h3>
+            <p class="text-blue-600">10 spurningar um Ísland</p>
+          </div>
+          <button
+            id="startQuizBtn"
+            class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+          >
+            Byrja leik
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Questions Page -->
+    <div id="questionsPage" class="max-w-3xl w-full hidden">
+      <div class="bg-white rounded-lg shadow-xl p-8">
+        <!-- Question Counter -->
+        <div class="text-center mb-6">
+          <span id="questionCounter" class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
+            Spurning 1 af 10
+          </span>
+        </div>
+
+        <!-- Question -->
+        <div class="text-center mb-8">
+          <h2 id="questionText" class="text-2xl font-bold text-gray-800 mb-8">
+            Hvað er höfuðborg Íslands?
+          </h2>
+
+          <!-- Answer -->
+          <div class="bg-gray-50 rounded-lg p-6 min-h-[100px] flex items-center justify-center">
+            <div id="answerContainer">
+              <button
+                id="showAnswerBtn"
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Svara spurningunni
+              </button>
+              <p id="answerText" class="text-xl text-green-700 font-semibold hidden">
+                Reykjavík
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between items-center">
+          <button
+            id="prevBtn"
+            class="px-6 py-3 rounded-lg font-semibold transition-colors bg-gray-300 text-gray-500 cursor-not-allowed"
+            disabled
+          >
+            ← Fyrri spurning
+          </button>
+
+          <button
+            id="homeFromQuizBtn"
+            class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors"
+          >
+            Forsíða
+          </button>
+
+          <button
+            id="nextBtn"
+            class="px-6 py-3 rounded-lg font-semibold transition-colors bg-blue-600 text-white hover:bg-blue-700"
+          >
+            Næsta spurning →
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-6 mt-8">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="mb-2">Quizly! - Spurningaleikur fyrir góða stemmingu</p>
+      <p class="text-gray-400 text-sm">Our names?</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
