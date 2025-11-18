@@ -1,7 +1,5 @@
 # Vefforritun 1, 2025, hópverkefni 2!
 
-- https://youtu.be/zlwHg9kDPZs
-
 ## Hópur
 
 - Verkefnastjóri (JS/HTML)
