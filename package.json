@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint:css": "stylelint '**/*.{css,scss}'",
-    "lint:js": "eslint '**/*.{js,ts}' --ext .js,.ts"
+    "lint:js": "eslint . --ext .js,.ts"
   },
   "devDependencies": {
     "eslint": "^9.39.1",
