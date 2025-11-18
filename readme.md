@@ -18,19 +18,23 @@ Verkefnið felst í að útbúa vef sem leyfir að búa til/velja spurningar og 
 
 `README.md` skrá skal vera í rót verkefnis og innihalda:
 
-Verkefnið er skipt í tvö mismunandi möppur, `efni` og `styles`, sem innihalda alla mikilvægustu skrárnar.
+Verkefnið er skipt í tvö mismunandi möppur, `src`, `efni` og `styles`, sem innihalda alla mikilvægustu skrárnar.
 
 "Styles"-mappan inniheldur `components` og `sites`, í þeim eru SCSS skrárnar fyrir tilteknar síður og html-kóðar, þar á meðal basic scss configs.
 
 Byrja á því að keyra í Terminal `npm install` til að sækja **Node_Modules**, svo er hægt að keyra verkefnið með `npm run dev` eða `npm start`.
 
-Hægt að nota `npm run lint` til að skoða villur á S/CSS skrárnar.
+Hægt að nota `npm run lint:css` eða `npm run lint:js` til að skoða villur á S/CSS skrárnar.
 
 Í main directory er gefið `.gitignore` og `.stylelintignore`.
 
 ## Efni
 
-Ekkert enn!
+Verkefnið er sett upp eftir verkefnalýsingunni fyrir Hópverkefni 2. Sett upp var SCSS og HTML en vefsíðan er keyrt aðallega á Javascript.
+
+Forsíðan var byggt úr okkar eigin concept úr Figma eftir verkefnastjóranum. 
+
+Allar spurningar eru vistuð í localStorage, `storage.js` og í því eru á minnsta kosti 11þús spurningar og eru allar á Íslensku.
 
 > Útgáfa 0.1
 
@@ -39,3 +43,6 @@ Ekkert enn!
 | Útgáfa | Lýsing                     |
 | ------ | -------------------------- |
 | 0.1    | Fyrsta útgáfa verkefnisins |
+| 0.2   | Framework sett upp og concept útbúið í Figma |
+| 0.3   | Concept Branch |
+| 1.0   | Final |

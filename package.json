@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint:css": "stylelint '**/*.{css,scss}'",
-    "lint:js": "eslint . --ext .js,.ts"
+    "lint:css": "stylelint '**/*.{css,scss}' --fix",
+    "lint:js": "eslint . --ext .js,.ts --fix"
   },
   "devDependencies": {
     "eslint": "^9.39.1",
