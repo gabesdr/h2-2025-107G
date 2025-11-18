@@ -51,8 +51,8 @@ export function renderHomeView(container) {
     }
 
     const card1 = createCard(
-        "Section 1",
-        "Búa til spurningar!<br>Smelltu hér til að búa til þínar eigin spurningar!",
+        "Búa til Spurningar",
+        "Smelltu hér til að búa til þínar eigin spurningar!",
         "Búa til spurningar",
         () => {
         window.location.hash = "#create";
@@ -60,8 +60,8 @@ export function renderHomeView(container) {
     );
 
     const card2 = createCard(
-        "Section 2",
-        "Byrja leik!<br>Prófaðu þekkinguna þína með spurningum úr bankanum.",
+        "Byrja Leik",
+        "Prófaðu þekkinguna þína með spurningum úr bankanum.",
         "Byrja leik",
         () => {
         window.location.hash = "#quiz";
@@ -69,8 +69,8 @@ export function renderHomeView(container) {
     );
 
     const card3 = createCard(
-        "Section 3",
-        "Skoða spurningar!<br>Skoðaðu allar spurningar í bankanum.",
+        "Skoða Spurningar",
+        "Skoðaðu allar spurningar í bankanum.",
         "Skoða spurningar",
         () => {
         window.location.hash = "#list";
