@@ -1,48 +1,126 @@
 # Vefforritun 1, 2025, hópverkefni 2!
 
-- [Fyrirlestur 10.3: Hópverkefni 2](https://youtu.be/zlwHg9kDPZs)
+- https://youtu.be/zlwHg9kDPZs
 
 ## Hópur
 
-- Verkefnastjóri (**JS/HTML**) Gabríel del Rosario - gdr5@hi.is [gabesdr](https://github.com/gabesdr)
-- Aðal UI/UX-Forritari (**CSS/HTML**) Gabriel Óðinn Schurack - gos30@hi.is [GabrielSchurack07](https://github.com/GabrielSchurack07)
-- HTML-Forritari (**HTML**) Alans Trejis - alt@hi.is [ThaBlanky](https://github.com/ThaBlanky)
-- HTML/CSS Forritari (**CSS/HTML**) Sigurður Óli Guðjónsson - sog70@hi.is [Sjolidos](https://github.com/Sjolidos)
+- Verkefnastjóri (JS/HTML)
+  Gabríel del Rosario – gdr5@hi.is – github.com/gabesdr
+
+- Aðal UI/UX-Forritari (CSS/HTML)
+  Gabriel Óðinn Schurack – gos30@hi.is – github.com/GabrielSchurack07
+
+- HTML-Forritari (HTML)
+  Alans Trejis – alt@hi.is – github.com/ThaBlanky
+
+- HTML/CSS Forritari (CSS/HTML)
+  Sigurður Óli Guðjónsson – sog70@hi.is – github.com/Sjolidos
+
+------------------------------------------------------------
 
 ## Verkefnalýsing
 
-Verkefnið felst í að útbúa vef sem leyfir að búa til/velja spurningar og birta þær í barsvar (pubquiz) formi.
+Verkefnið felst í því að útbúa vef sem leyfir að búa til og velja spurningar
+og birta þær í barsvar (pubquiz) formi.  
+Allt efni á vefnum er búið til með JavaScript við keyrslu.
 
+------------------------------------------------------------
 
 ## Lýsing á verkefni
 
-`README.md` skrá skal vera í rót verkefnis og innihalda:
+Verkefnið er skipt í eftirfarandi möppur:
 
-Verkefnið er skipt í tvö mismunandi möppur, `src`, `efni` og `styles`, sem innihalda alla mikilvægustu skrárnar.
+src/       → JavaScript, router, views, CSV, localStorage  
+styles/    → SCSS skipting (reset, global, home, quiz, create etc.)  
+public/    → questions.csv
 
-"Styles"-mappan inniheldur `components` og `sites`, í þeim eru SCSS skrárnar fyrir tilteknar síður og html-kóðar, þar á meðal basic scss configs.
+Til að keyra verkefnið:
 
-Byrja á því að keyra í Terminal `npm install` til að sækja **Node_Modules**, svo er hægt að keyra verkefnið með `npm run dev` eða `npm start`.
+npm install  
+npm run dev  
+npm start  
 
-Hægt að nota `npm run lint:css` eða `npm run lint:js` til að skoða villur á S/CSS skrárnar.
+Lint:
 
-Í main directory er gefið `.gitignore` og `.stylelintignore`.
+npm run lint:css  
+npm run lint:js  
+
+Helstu ignore skrár í rót:
+.gitignore  
+.stylelintignore  
+
+------------------------------------------------------------
 
 ## Efni
 
-Verkefnið er sett upp eftir verkefnalýsingunni fyrir Hópverkefni 2. Sett upp var SCSS og HTML en vefsíðan er keyrt aðallega á Javascript.
+Vefsíðan er gerð samkvæmt verkefnalýsingu Hópverkefnis 2.
 
-Forsíðan var byggt úr okkar eigin concept úr Figma eftir verkefnastjóranum. 
+Forsíðan er hönnuð eftir eigin Figma-concept.  
+Allt UI er skrifað í SCSS og birt með JS.
 
-Allar spurningar eru vistuð í localStorage, `storage.js` og í því eru á minnsta kosti 11þús spurningar og eru allar á Íslensku.
+Spurningar eru:
+- hlaðnar úr CSV með loadCSVQuestions()
+- vistaðar í localStorage með storage.js
+- yfir 11.000 samtals
+- nýjar spurningar birtast neðst (ekki random)
+- þegar leikur er byrjaður er röðun random (shuffle)
+- currentIndex vistað í localStorage
 
-> Útgáfa 0.1
+------------------------------------------------------------
+
+## Útfærð virkni
+
+### Grunvirkni
+
+• Birta eina spurningu í einu  
+• Næsta / Fyrri takkar  
+• Router (hash) heldur stöðu við refresh  
+• Haus + valmynd + fótur á forsíðu
+• Útlit skalanlegt 450px–1600px  
+
+### Önnur virkni
+
+Vista stöðu í localStorage (currentIndex)
+
+Búa til nýjar spurningar + vista í localStorage (telst sem 2 verkefni)  
+
+Metadata fyrir spurningu: flokkur, erfiðleikastig  
+
+Hlaða inn 11k+ spurningum úr CSV  
+
+Random shuffle í QuizView (Gert fyrir gamanið)
+
+------------------------------------------------------------
+
+## Gögn
+
+Spurningar koma frá:
+
+github.com/sveinn-steinarsson/is-trivia-questions
+
+CSV inniheldur:
+flokkur  
+undirflokkur  
+erfiðleikastig  
+gæðastig  
+spurning  
+svar  
+
+Við umbreyttum CSV yfir í JS með loadCSVQuestions()
+
+------------------------------------------------------------
+
+## Útgáfa
+
+Útgáfa: 1.0
+
+------------------------------------------------------------
 
 ## Útgáfusaga
 
-| Útgáfa | Lýsing                     |
-| ------ | -------------------------- |
-| 0.1    | Fyrsta útgáfa verkefnisins |
-| 0.2   | Framework sett upp og concept útbúið í Figma |
-| 0.3   | Concept Branch |
-| 1.0   | Final |
+| Útgáfa | Lýsing |
+|-------|------------------------------------------------|
+| 0.1   | Fyrsta útgáfa verkefnisins                     |
+| 0.2   | Framework sett upp og concept útbúið í Figma   |
+| 0.3   | Concept Branch                                 |
+| 1.0   | Final                                          |
